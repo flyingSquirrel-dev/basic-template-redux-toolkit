@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
-import Count from './feature/count'
-import Articles from './feature/articles'
+import Count from './features/count'
+import Articles from './features/articles'
 
 function App() {
   return (

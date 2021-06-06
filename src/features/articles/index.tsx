@@ -9,6 +9,7 @@ const Articles = () => {
   })
 
   return (
+    // TODO: status에 따라 다른 UI 뿌려지도록 컴포넌트 추상화시키기
     <section>
       <div>API Fetch Status: {status}</div>
       <ul>
