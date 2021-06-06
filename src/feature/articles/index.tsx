@@ -1,5 +1,6 @@
 import { useFetchAPI } from '../../app/hook/fetch'
 import { ArticleDataProps } from './types'
+import { FETCHED } from '../../app/constant'
 
 const Articles = () => {
   const { status, data } = useFetchAPI({
@@ -11,11 +12,12 @@ const Articles = () => {
     <section>
       <div>API Fetch Status: {status}</div>
       <ul>
-        {data.map((list: ArticleDataProps) => {
-          const { id, body } = list
+        {status === FETCHED &&
+          data.map((list: ArticleDataProps) => {
+            const { id, body } = list
 
-          return <li key={`article-${id}`}>{body}</li>
-        })}
+            return <li key={`article-${id}`}>{body}</li>
+          })}
       </ul>
     </section>
   )
